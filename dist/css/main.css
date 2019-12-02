@@ -43,7 +43,7 @@
     background: #373737;
     list-style: none;
     transform: translate3d(0, -100%, 0);
-    opacity: 0.9;
+    opacity: 0.98;
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
@@ -54,12 +54,12 @@
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
-      width: 250px;
-      height: 250px;
-      background: url("../img/portrait_small.jpg");
-      background-size: 235px 300px;
+      background: url("../img/portrait_smaller.jpg");
       border-radius: 50%;
-      border: solid 3px #00bfff; }
+      border: solid 3px #00bfff;
+      background-size: cover;
+      height: 250px;
+      width: 250px; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     opacity: 0.9;
@@ -171,7 +171,10 @@ main {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border: #00bfff 3px solid; }
+  border: #00bfff 3px solid;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%; }
 
 .bio {
   grid-area: bio;
@@ -202,6 +205,25 @@ main {
       opacity: 0.5;
       border-color: #00bfff;
       transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 2px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #00bfff;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -258,7 +280,7 @@ main {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
   .portrait {
-    background: url("../img/portrait_small.jpg");
+    background: url("../img/portrait_smaller.jpg");
     width: 150px;
     height: 150px; }
   .about-info {
@@ -268,7 +290,16 @@ main {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; }
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .portrait {
+    background: url("../img/portrait_smaller.jpg");
+    width: 150px;
+    height: 150px; } }
