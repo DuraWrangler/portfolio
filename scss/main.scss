@@ -87,6 +87,8 @@ main {
 	border-radius: 50%;
 	border: $secondary-color 3px solid;
 	object-fit: cover;
+	width: 250px;
+	height: auto;
 }
 
 .bio {
@@ -96,14 +98,25 @@ main {
 
 .job-1 {
 	grid-area: job1;
+	p {
+		text-align: left;
+	}
 }
 
 .job-2 {
 	grid-area: job2;
+	p {
+		text-align: left;
+	}
 }
 
 .job-3 {
 	grid-area: job3;
+}
+
+.inner-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 }
 
 .job {
