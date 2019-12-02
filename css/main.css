@@ -170,7 +170,9 @@ main {
   margin: auto;
   border-radius: 50%;
   border: #00bfff 3px solid;
-  object-fit: cover; }
+  object-fit: cover;
+  width: 250px;
+  height: auto; }
 
 .bio {
   grid-area: bio;
@@ -178,12 +180,20 @@ main {
 
 .job-1 {
   grid-area: job1; }
+  .job-1 p {
+    text-align: left; }
 
 .job-2 {
   grid-area: job2; }
+  .job-2 p {
+    text-align: left; }
 
 .job-3 {
   grid-area: job3; }
+
+.inner-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
 
 .job {
   background: #515151;
